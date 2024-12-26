@@ -45,7 +45,7 @@ class EmailServiceImpl implements IEmailService {
 //            send Email
             helper.setTo(messageDTO.getTo());
             helper.setText(html, true);
-            helper.setSubject(message.getSubject());
+            helper.setSubject(messageDTO.getSubject());
             helper.setFrom(messageDTO.getFrom());
             javaMailSender.send(message);
             logger.info("End... Email sent success");
